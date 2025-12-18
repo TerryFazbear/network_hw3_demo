@@ -161,7 +161,7 @@ python developer_client.py <host> <port>
 
 **Simple Chat v1.1:**
 - Same as v1.0 but with emoji support
-- Try: 😊 👍 🎮 ❤️
+- Supports emoji if you paste them: 😊 👍 🎮
 
 **Tic Tac Toe v1.0:**
 - 2 players (X and O)
@@ -194,47 +194,6 @@ python developer_client.py <host> <port>
 
 ---
 
-## 📊 Demo Success Checklist
-
-- [ ] Developer can upload games
-- [ ] Developer can update game versions
-- [ ] Player can register and login
-- [ ] Player can browse and download games
-- [ ] Two players can join same room
-- [ ] Game starts and both clients connect
-- [ ] Players can communicate/play in game
-- [ ] Game ends cleanly for both players
-- [ ] Room can be reused for another game ⭐ (Critical!)
-
----
-
-## 💡 Demo Tips
-
-1. **Test connectivity first** - `ping linux4.cs.nycu.edu.tw`
-2. **Use two terminals** - Easier than two machines for quick demo
-3. **Upload games first** - Do developer demo before player demo
-4. **Show version upgrade** - Upload v1.0, then v1.1, show auto-upgrade
-5. **Show room reuse** - Play game, quit, start another game
-6. **Keep it simple** - Use simple_chat for quick demo
-
----
-
-## 📞 If Something Goes Wrong
-
-**Check server status:**
-```bash
-# Test each port
-nc -vz linux4.cs.nycu.edu.tw 10001  # Database
-nc -vz linux4.cs.nycu.edu.tw 10002  # Lobby
-nc -vz linux4.cs.nycu.edu.tw 10003  # Developer
-```
-
-**Contact server admin** if:
-- All ports unreachable → Server may be down
-- Lobby works but games fail → Firewall blocking game ports (5000-5100)
-- Database errors → May need cleanup (`clean_database.py`)
-
----
 
 ## ✅ System Requirements
 
@@ -242,8 +201,5 @@ nc -vz linux4.cs.nycu.edu.tw 10003  # Developer
 - Network access to linux4.cs.nycu.edu.tw
 - Standard library only (no pip install needed)
 
----
 
-**Good luck with your demo! 🎉**
 
-The system is fully functional and ready to impress. All use cases work, rooms reset properly, and cross-machine gameplay is smooth.
