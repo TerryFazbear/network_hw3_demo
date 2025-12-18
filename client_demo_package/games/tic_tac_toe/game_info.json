@@ -1,0 +1,17 @@
+{
+  "name": "Tic Tac Toe",
+  "version": "1.0",
+  "description": "Classic 2-player Tic Tac Toe game",
+  "min_players": 2,
+  "max_players": 2,
+  "server": {
+    "entry_point": "game_server.py",
+    "start_command": "python",
+    "arguments": ["--port", "{PORT}", "--players", "{NUM_PLAYERS}"]
+  },
+  "client": {
+    "entry_point": "game_client.py",
+    "start_command": "python",
+    "arguments": ["--host", "{HOST}", "--port", "{PORT}", "--username", "{USERNAME}"]
+  }
+}
