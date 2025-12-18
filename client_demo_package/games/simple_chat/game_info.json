@@ -1,0 +1,17 @@
+{
+  "name": "simple_chat",
+  "version": "1.0",
+  "description": "Simple 2-player chat application",
+  "min_players": 2,
+  "max_players": 2,
+  "server": {
+    "entry_point": "game_server.py",
+    "start_command": "python",
+    "arguments": ["--port", "{PORT}", "--players", "{NUM_PLAYERS}"]
+  },
+  "client": {
+    "entry_point": "game_client.py",
+    "start_command": "python",
+    "arguments": ["--host", "{HOST}", "--port", "{PORT}", "--username", "{USERNAME}"]
+  }
+}
